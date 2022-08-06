@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { api } from './api/api';
 import { Header } from './components/Header/Header';
+import { Registration } from './components/Registration/Registration';
 
 export interface IRequest {
   name: string;
@@ -34,6 +35,7 @@ function App() {
         : "nothing"} */}
 
       <Header />
+      <Registration />
     </div>
   )
 }
