@@ -1,0 +1,61 @@
+@import "../../styles/style.scss";
+
+.header {
+  background: url("../../assets/index-image.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 70vh;
+
+  &-container {
+    @include container;
+    padding-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &-nav {
+      &-ul {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 300px;
+
+      }
+
+      &-li:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+  &-tittle {
+    @include container;
+    margin-top: 250px;
+
+    &-h1 {
+      text-transform: uppercase;
+      font-size: 5em;
+      font-weight: 100;
+    }
+
+    &-caption {
+      margin-top: 3rem;
+      font-size: 2em;
+      font-weight: 100;
+      text-transform: uppercase;
+    }
+  }
+}
+
+
+
+.separator {
+  width: 6px;
+  height: 6px;
+  background-color: white;
+  border-radius: 50%;
+}
+
+.logo {
+  width: 170px;
+}

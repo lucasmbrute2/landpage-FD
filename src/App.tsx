@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { api } from './api/api';
-import './App.css'
+import { Header } from './components/Header/Header';
 
 export interface IRequest {
   name: string;
@@ -20,7 +20,7 @@ function App() {
 
   return (
     <div className="App">
-      <button onClick={HandleTest}>Click me</button>
+      {/* <button onClick={HandleTest}>Click me</button>
 
       {data ?
         data.map(user => (
@@ -31,7 +31,9 @@ function App() {
             <p>{user.phone}</p>
           </div>
         ))
-        : "nothing"}
+        : "nothing"} */}
+
+      <Header />
     </div>
   )
 }
