@@ -22,19 +22,6 @@ function App() {
 
   return (
     <div className="App">
-      {/* <button onClick={HandleTest}>Click me</button>
-
-      {data ?
-        data.map(user => (
-          <div>
-            <a>{user.name}</a>
-            <p>{user.email}</p>
-            <p>{user.birthday}</p>
-            <p>{user.phone}</p>
-          </div>
-        ))
-        : "nothing"} */}
-
       <Header />
       <Registration />
       <RegisterList />
