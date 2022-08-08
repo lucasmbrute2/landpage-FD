@@ -1,0 +1,51 @@
+.registerList {
+  display: flex;
+  align-items: center;
+  padding: 3rem;
+  background-color: #fff;
+  flex-direction: column;
+
+  &-h2 {
+    text-transform: uppercase;
+    font-size: 3em;
+    color: #29abe2;
+    margin-top: 2rem;
+  }
+
+}
+
+.registerList-table {
+  margin-top: 4rem;
+  border-collapse: collapse;
+
+  &-tr:not(:last-child) {
+    border: none;
+  }
+
+  &-th {
+    padding: .8rem 2rem;
+    border-bottom: 1px solid #29abe2;
+    border-left: 1px solid #29abe2;
+    color: #012d51;
+    text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+
+    &.first-row {
+      border-left: none;
+    }
+  }
+
+  &-td {
+    border-left: 1px solid #29abe2;
+    border-bottom: 1px solid #29abe2;
+    padding: .5rem;
+    text-align: center;
+    color: #808080;
+
+    &.first-column {
+      border-left: none;
+      color: #012d51;
+    }
+  }
+}

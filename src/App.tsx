@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { api } from './api/api';
 import { Header } from './components/Header/Header';
+import { RegisterList } from './components/RegisterList/RegisterList';
 import { Registration } from './components/Registration/Registration';
 
 export interface IRequest {
@@ -36,6 +37,7 @@ function App() {
 
       <Header />
       <Registration />
+      <RegisterList />
     </div>
   )
 }
