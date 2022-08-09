@@ -1,17 +1,10 @@
-import { useEffect, useState } from "react"
-import { api } from "../../api/api"
-import { IRequest } from "../../App"
+import { useContext } from "react"
+import { Context, UserContexType } from "../../context"
 import "./RegisterList.scss"
 
 export function RegisterList() {
 
-  const [userList, setUserList] = useState<IRequest[]>([])
-
-  useEffect(() => {
-    api.getAll("/user")
-      .then((response) => response.json())
-      .then((data) => setUserList(data))
-  }, [])
+  const { users } = useContext(Context) as UserContexType
 
   return (
     <div className="registerList">
@@ -26,8 +19,8 @@ export function RegisterList() {
             <th className="registerList-table-th">telefone</th>
           </tr>
         </thead>
-        {userList.map((user, i) => (
-          <tbody >
+        {users.map((user, i) => (
+          <tbody>
             <tr key={i} className="registerList-table-tr">
               <td className="registerList-table-td first-column">{i + 1}</td>
               <td className="registerList-table-td">{user.name}</td>

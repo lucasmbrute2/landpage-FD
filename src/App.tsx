@@ -1,8 +1,10 @@
 import { useState } from 'react'
 import { api } from './api/api';
+import { Footer } from './components/Footer/Footer';
 import { Header } from './components/Header/Header';
 import { RegisterList } from './components/RegisterList/RegisterList';
 import { Registration } from './components/Registration/Registration';
+import { CtxApp } from './context';
 
 export interface IRequest {
   name: string;
@@ -12,19 +14,14 @@ export interface IRequest {
 }
 
 function App() {
-  const [data, setData] = useState<IRequest[]>([]);
-
-  async function HandleTest() {
-    const res = await api.getAll("/user")
-    const data = await res.json()
-    setData(data)
-  }
-
   return (
     <div className="App">
-      <Header />
-      <Registration />
-      <RegisterList />
+      <CtxApp>
+        <Header />
+        <Registration />
+        <RegisterList />
+        <Footer />
+      </CtxApp>
     </div>
   )
 }
