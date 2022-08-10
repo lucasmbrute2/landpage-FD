@@ -14,12 +14,15 @@
     align-items: center;
 
     &-nav {
+
+
+
       &-ul {
         display: flex;
         justify-content: space-around;
         align-items: center;
         width: 300px;
-
+        flex-wrap: wrap;
       }
 
       &-li:hover {
@@ -58,4 +61,82 @@
 
 .logo {
   width: 170px;
+}
+
+.icon {
+  position: absolute;
+  right: 1%;
+  height: 30px;
+  cursor: pointer;
+  width: fit-content;
+}
+
+.hamburguer {
+  top: 50%;
+  left: 10%;
+  width: 30px;
+  height: 4px;
+  background-color: #fff;
+  transition: .5s;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.hamburguer:before {
+  position: absolute;
+  top: -42%;
+  content: "";
+  width: 30px;
+  height: 4px;
+  background-color: #fff;
+  transition: .5s;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.hamburguer:after {
+  position: absolute;
+  top: 12px;
+  content: '';
+  width: 30px;
+  height: 4px;
+  background-color: #fff;
+  transition: .5s;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2)
+}
+
+.responsiveList {
+  position: absolute;
+  width: 550px;
+  background-color: tomato;
+  height: 100vh;
+  right: 0;
+  top: 0;
+  margin-top: 0;
+  transition: .3s ease-in;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.icon.iconActive .hamburguer {
+  background: transparent;
+  transition: .3s;
+  box-shadow: 0 2px 5px transparent;
+}
+
+.icon.iconActive .hamburguer::after {
+  top: 0;
+  background: #fff;
+  transform: rotate(135deg);
+}
+
+.icon.iconActive .hamburguer::before {
+  top: 0;
+  background: #fff;
+  transform: rotate(225deg);
+}
+
+.li--active {
+  text-shadow: 0 2px 9px rgba(150, 150, 150, 0.86);
+  font-size: 1.2em;
 }
