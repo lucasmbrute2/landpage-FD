@@ -79,6 +79,7 @@
   background-color: #fff;
   transition: .5s;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  display: none;
 }
 
 .hamburguer:before {
@@ -139,4 +140,20 @@
 .li--active {
   text-shadow: 0 2px 9px rgba(150, 150, 150, 0.86);
   font-size: 1.2em;
+}
+
+@media(max-width: 1000px) {
+  .hamburguer {
+    display: block;
+    z-index: 999;
+  }
+
+  .header-container-nav-li,
+  .separator {
+    display: none;
+  }
+
+  .responsiveList {
+    width: 100%;
+  }
 }
